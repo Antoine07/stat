@@ -58,9 +58,9 @@ plt.show()
 
 > La corrélation mesure **à quel point deux variables évoluent ensemble**.
 
-* positive → quand x augmente, y augmente
-* négative → quand x augmente, y diminue
-* proche de 0 → pas de lien linéaire clair
+- positive → quand x augmente, y augmente
+- négative → quand x augmente, y diminue
+- proche de 0 → pas de lien linéaire clair
 
 ---
 
@@ -107,8 +107,8 @@ b = np.array([9, 7, 5, 3, 1])
 
 Exemples classiques :
 
-* température et ventes de glaces
-* nombre de pompiers et dégâts
+- température et ventes de glaces
+- nombre de pompiers et dégâts
 
 > La corrélation décrit un lien, **pas une cause**.
 
