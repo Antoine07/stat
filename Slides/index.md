@@ -7,7 +7,7 @@ class: lead
 
 # Cours de Maths/Statisques  1/x
 
-### [Installation](../README.md)
+### [Installation](https://github.com/Antoine07/stat/README.md)
 
 ### [**Introduction**](https://antoine07.github.io/stat/introduction.html) 
 

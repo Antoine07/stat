@@ -1,5 +1,9 @@
 # Cours de stat
 
+## Les slides 
+
+### [**Supports de cours**](https://antoine07.github.io/stat) 
+
 *Lisez bien tout pour choisir une méthode d'installation*
 
 1. **Télécharger Python**
@@ -125,3 +129,6 @@ uvicorn
 python-multipart
 ```
 
+## Retour au support de cours
+
+### [**Supports de cours**](https://antoine07.github.io/stat) 
