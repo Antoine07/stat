@@ -9,11 +9,13 @@ class: lead
 
 ### [**Installation**](https://github.com/Antoine07/stat/blob/main/README.md)
 
-### [**Exercices**](https://antoine07.github.io/stat/exo_introduction.html)
-
 ### [**Introduction**](https://antoine07.github.io/stat/introduction.html) 
 
+### [**Exercices**](https://antoine07.github.io/stat/exo_introduction.html)
+
 ### [**Dispersion**](https://antoine07.github.io/stat/dispersion.html) 
+
+### [**Exercices Dispersion**](https://antoine07.github.io/stat/exo_dispersion.html)
 
 ### [**correlation**](https://antoine07.github.io/stat/correlation.html) 
 

@@ -131,20 +131,3 @@ z
 * La valeur aberrante est **15**
 * Après normalisation, 15 aura un z-score nettement plus élevé que les autres.
 * Normaliser aide car tout est mis sur une échelle comparable : une valeur très éloignée apparaît immédiatement via (|z|).
-
----
-
-## Correction Exercice 10 — Cas réel ML
-
-1. Indispensable car revenu (€) peut être en dizaines de milliers alors que achats mensuels est petit : les échelles diffèrent énormément.
-2. Sans normalisation :
-
-   * la variable “revenu” domine les distances, les gradients ou la régularisation
-   * le modèle apprend mal ou converge lentement
-3. Algorithmes sensibles :
-
-   * k-NN, k-means (distances)
-   * SVM (marges + distances)
-   * régression logistique / linéaire avec descente de gradient
-   * réseaux de neurones (optimisation)
-   * PCA (variance)
