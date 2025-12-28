@@ -1,0 +1,17 @@
+{
+  "name": "maths",
+  "version": "1.0.0",
+  "description": "## **Plan**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "slides:build": "mkdir -p docs && for file in Slides/*.md; do npx marp \"$file\" --html --allow-local-files -o \"docs/$(basename \"${file%.md}.html\")\"; done",
+    "slides:watch": "npx marp Slides --html --allow-local-files --server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@marp-team/marp-cli": "^4.2.3"
+  }
+}
