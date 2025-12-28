@@ -5,7 +5,7 @@ paginate: true
 class: lead
 ---
 
-# Cours de Maths/Statisques 
+# Cours de Maths/Statisques  1/x
 
 ### [Installation](../README.md)
 
@@ -19,5 +19,11 @@ class: lead
 
 ---
 
-## TPs
+## Cours de Maths/Statistiques 2/x
 
+### [**ACP**](https://antoine07.github.io/stat/acp.html) 
+
+---
+
+
+## TPs
