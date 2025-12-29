@@ -29,5 +29,6 @@ class: lead
 
 ---
 
+## Plan pour votre projet 
 
-## TPs
+### [**Plan pour la présentation de vos projets Data**]((https://antoine07.github.io/stat/presentation_sujet_data.html))
