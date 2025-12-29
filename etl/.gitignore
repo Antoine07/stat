@@ -1,0 +1,19 @@
+.DS_Store
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Data (keep small, non-sensitive fixtures only)
+data/raw/
+data/tmp/
+data/output/
+!data/.gitkeep

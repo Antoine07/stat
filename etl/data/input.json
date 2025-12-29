@@ -1,0 +1,67 @@
+[
+    {
+      "user_id": 101,
+      "group": "control",
+      "score": 72,
+      "time_spent": 310,
+      "errors": 2,
+      "session_date": "2024-01-01"
+    },
+    {
+      "user_id": 102,
+      "group": "control",
+      "score": 65,
+      "time_spent": 280,
+      "errors": 4,
+      "session_date": "2024-01-01"
+    },
+    {
+      "user_id": 103,
+      "group": "variant",
+      "score": 78,
+      "time_spent": 295,
+      "errors": 1,
+      "session_date": "2024-01-01"
+    },
+    {
+      "user_id": 104,
+      "group": "variant",
+      "score": 82,
+      "time_spent": 330,
+      "errors": 0,
+      "session_date": "2024-01-01"
+    },
+    {
+      "user_id": 105,
+      "group": "control",
+      "score": null,
+      "time_spent": 260,
+      "errors": 3,
+      "session_date": "2024-01-02"
+    },
+    {
+      "user_id": 106,
+      "group": "variant",
+      "score": "85",
+      "time_spent": 340,
+      "errors": 0,
+      "session_date": "2024-01-02"
+    },
+    {
+      "user_id": 107,
+      "group": "control",
+      "score": 55,
+      "time_spent": 400,
+      "errors": 6,
+      "session_date": "2024-01-02"
+    },
+    {
+      "user_id": 108,
+      "group": "variant",
+      "score": 90,
+      "time_spent": 360,
+      "errors": 0,
+      "session_date": "2024-01-02"
+    }
+  ]
+  
