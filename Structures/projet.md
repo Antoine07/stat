@@ -1,9 +1,9 @@
 # Ce que Tableau ne doit PAS faire (règle claire)
 
-❌ nettoyer les données
-❌ recalculer des moyennes complexes
-❌ refaire le centrage-réduction
-❌ masquer des outliers
+- ❌ nettoyer les données
+- ❌ recalculer des moyennes complexes
+- ❌ refaire le centrage-réduction
+- ❌  masquer des outliers
 
 👉 Tableau consomme, Python prépare.
 
