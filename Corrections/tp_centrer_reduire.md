@@ -125,7 +125,6 @@ Si vous le souhaitez, je peux proposer :
 
 import numpy as np
 import matplotlib.pyplot as plt
-
 # =============================
 # Données
 # =============================
@@ -138,60 +137,51 @@ sprint = np.array([14.2, 13.5, 13.8, 12.9, 12.1, 14.5, 13.6])
 maths_mean = maths.mean()
 maths_std = maths.std()
 
+print(f"maths_mean= {maths_mean: .2f}")
+print(f"maths_std= {maths_std: .2f}")
+print(f"perc_std= {(maths_std/20)*100: .2f}")
+
+print("------------------------------------")
+
 sprint_mean = sprint.mean()
 sprint_std = sprint.std()
 
-print("STATISTIQUES BRUTES")
-print(f"Maths   : moyenne = {maths_mean:.2f}, écart-type = {maths_std:.2f}")
-print(f"Sprint  : moyenne = {sprint_mean:.2f}, écart-type = {sprint_std:.2f}")
+print(f"sprint_mean= {sprint_mean: .2f}")
+print(f"sprint_std= {sprint_std: .2f}")
+print(f"perc_std= {(sprint_std/20)*100: .2f}")
+
+print("------------------------------------")
 
 # =============================
 # Centrage-réduction
 # =============================
-maths_cr = (maths - maths_mean) / maths_std
-sprint_cr = (sprint - sprint_mean) / sprint_std
-
-print("\nSTATISTIQUES APRES CENTRAGE-REDUCTION")
-print(f"Maths CR  : moyenne = {maths_cr.mean():.2f}, écart-type = {maths_cr.std():.2f}")
-print(f"Sprint CR : moyenne = {sprint_cr.mean():.2f}, écart-type = {sprint_cr.std():.2f}")
-
-# =============================
-# Analyse individuelle
-# =============================
-print("\nANALYSE PAR ETUDIANT")
-for i in range(len(maths)):
-    print(
-        f"Etudiant {i+1} | "
-        f"Maths CR = {maths_cr[i]:+.2f} | "
-        f"Sprint CR = {sprint_cr[i]:+.2f}"
-    )
+maths_cr = ( maths - maths_mean ) /maths_std
+sprint_cr = (sprint - sprint_mean ) /sprint_std
 
 # =============================
 # Inversion du sprint (performance)
 # =============================
-# Temps faible = bonne performance
 sprint_perf_cr = -sprint_cr
+# =============================
+# Analyse individuelle
+# =============================
+
+for i in range(len(maths)):
+    print(
+        f"student {i+1} | "
+        f"maths_cr = {maths_cr[i]:+.2f} | "
+        f"sprint_cr = {sprint_perf_cr[i]:+.2f} "
+    )
+print("------------------------------------")
 
 # =============================
 # Visualisation comparative
 # =============================
-x = np.arange(len(maths))
-
+x = np.arange(len(maths)) 
 plt.figure()
-plt.scatter(x, maths_cr, label="Maths (CR)")
-plt.scatter(x, sprint_perf_cr, label="Sprint (performance CR)")
-plt.vlines(x, maths_cr, sprint_perf_cr)
+plt.scatter(x, maths_cr, label="Maths CR")
+plt.scatter(x, sprint_perf_cr, label="Sprint CR")
 plt.axhline(0)
 
-plt.xlabel("Etudiant")
-plt.ylabel("Ecart à la moyenne (en écart-type)")
-plt.title("Comparaison après centrage-réduction")
-plt.legend()
 plt.show()
-
-# =============================
-# Corrélation
-# =============================
-corr = np.corrcoef(maths_cr, sprint_perf_cr)[0, 1]
-print(f"\nCORRELATION Maths / Sprint (performance) = {corr:.2f}")
 ```
