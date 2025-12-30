@@ -19,9 +19,10 @@ def test_variance_and_std_sample() -> None:
 
 def test_describe_single_observation_variance_nan() -> None:
     stats = describe([10.0])
-    assert stats["n"] == 1.0
-    assert math.isnan(stats["variance"])
-    assert math.isnan(stats["std_dev"])
+    assert stats["n"] == 1
+    assert stats["variance"] is None
+    assert stats["std_dev"] is None
+
 
 def test_identical_values_variance_zero() -> None:
     values = [5.0, 5.0, 5.0, 5.0]

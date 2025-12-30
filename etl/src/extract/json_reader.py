@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Iterable
 
 
-REQUIRED_FIELDS = ("user_id", "group", "score", "time_spent", "errors", "session_date")
+REQUIRED_FIELDS = ("user_id", "group", "score")
 
 
 def read_json_records(path: Path, required_fields: Iterable[str] = REQUIRED_FIELDS) -> list[dict]:
@@ -13,7 +13,7 @@ def read_json_records(path: Path, required_fields: Iterable[str] = REQUIRED_FIEL
     Extract layer responsibility: load raw observations (no cleaning, no stats).
 
     - Reads a JSON file expected to contain a list of objects.
-    - Validates presence of required fields (values may still be null/invalid).
+    - Validates presence of minimal required fields (values may still be null/invalid).
     - Returns raw Python objects: list[dict].
     """
     if not path.exists():
@@ -34,4 +34,3 @@ def read_json_records(path: Path, required_fields: Iterable[str] = REQUIRED_FIEL
         records.append(item)
 
     return records
-

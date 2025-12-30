@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-from dataclasses import asdict
 from pathlib import Path
 
 from src.extract.json_reader import read_json_records
@@ -24,9 +23,9 @@ def run(input_path: Path) -> dict:
 
     return {
         "input_path": str(input_path),
-        "cleaning_report": asdict(cleaning_report),
+        "cleaning_report": cleaning_report,
         "descriptive": descriptive,
-        "inferential": asdict(inference),
+        "inferential": inference,
         "limitations": [
             "No causal claims: group differences are descriptive/inferential only.",
             "Assumptions (independence/approximate normality) are not automatically validated.",
@@ -47,4 +46,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

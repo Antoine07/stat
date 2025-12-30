@@ -37,7 +37,7 @@ def standard_deviation(values: Sequence[float], *, ddof: int = 1) -> float:
     return math.sqrt(variance(values, ddof=ddof))
 
 
-def describe(values: Sequence[float]) -> dict[str, float]:
+def describe(values: Sequence[float]) -> dict:
     """
     Descriptive statistics: what is observed (no inference).
 
@@ -46,8 +46,8 @@ def describe(values: Sequence[float]) -> dict[str, float]:
     if len(values) == 0:
         raise ValueError("describe requires at least 1 value")
 
-    stats: dict[str, float] = {
-        "n": float(len(values)),
+    stats: dict = {
+        "n": len(values),
         "mean": mean(values),
         "median": median(values),
         "min": float(min(values)),
@@ -58,8 +58,8 @@ def describe(values: Sequence[float]) -> dict[str, float]:
         stats["variance"] = variance(values, ddof=1)
         stats["std_dev"] = standard_deviation(values, ddof=1)
     else:
-        stats["variance"] = float("nan")
-        stats["std_dev"] = float("nan")
+        stats["variance"] = None
+        stats["std_dev"] = None
 
     return stats
 
@@ -67,7 +67,7 @@ def describe(values: Sequence[float]) -> dict[str, float]:
 def describe_dataset(
     records: list[dict],
     *,
-    value_fields: Iterable[str] = ("score", "time_spent", "errors"),
+    value_fields: Iterable[str] = ("score",),
     group_field: str = "group",
 ) -> dict:
     if not records:
@@ -76,8 +76,8 @@ def describe_dataset(
     fields = tuple(value_fields)
     groups = sorted({r[group_field] for r in records})
     counts_by_group = {g: 0 for g in groups}
-    for r in records:
-        counts_by_group[r[group_field]] += 1
+    for record in records:
+        counts_by_group[record[group_field]] += 1
 
     global_stats = {field: describe([float(r[field]) for r in records]) for field in fields}
     group_stats = {
@@ -90,4 +90,3 @@ def describe_dataset(
         "global": global_stats,
         "by_group": group_stats,
     }
-

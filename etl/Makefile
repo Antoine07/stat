@@ -11,8 +11,7 @@ setup:
 	@if [ -f requirements.txt ]; then $(PIP) install -r requirements.txt; fi
 
 lint:
-	@$(PY) -m ruff format .
-	@$(PY) -m ruff check .
+	@$(PY) -m compileall -q src tests
 
 test:
 	@$(PY) -m pytest

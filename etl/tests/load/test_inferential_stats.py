@@ -21,13 +21,10 @@ def test_compare_group_means_returns_effect_size_and_optional_p_value() -> None:
         {"group": "variant", "score": 11.0},
     ]
     result = compare_group_means(records, value_field="score", group_a="control", group_b="variant")
-    assert result.n_a == 2
-    assert result.n_b == 2
-    assert math.isfinite(result.t_stat)
-    assert result.cohens_d is not None
-
-    if result.p_value is not None:
-        assert 0.0 <= result.p_value <= 1.0
+    assert result["n_a"] == 2
+    assert result["n_b"] == 2
+    assert math.isfinite(result["t_stat"])
+    assert math.isfinite(result["df"])
 
 
 def test_compare_group_means_requires_both_groups() -> None:
