@@ -65,15 +65,12 @@ Puis répondre :
 
 ---
 
-## Boxplot (lecture globale)
+## Boxplot 
 
 Tracer le **diagramme en boîte** de la longueur des pétales.
 
 ```python
-plt.boxplot(petal_length, vert=False)
-plt.title("Boxplot – longueur des pétales")
-plt.xlabel("cm")
-plt.show()
+# TODO
 ```
 
 Questions :
@@ -142,9 +139,5 @@ Questions :
 2. Quelle espèce est la plus dispersée ?
 3. Peut-on conclure à une causalité ? Pourquoi ?
 
----
 
-## Phrase de synthèse attendue
-
-> Le boxplot permet de visualiser simultanément la médiane, la dispersion et les valeurs atypiques, et complète efficacement les indicateurs numériques.
 
